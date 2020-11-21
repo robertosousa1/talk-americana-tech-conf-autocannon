@@ -13,16 +13,16 @@ async function run(url) {
   const inst = autocannon({
     url,
     connections: 1,
-    amount: 2,
-    method: "POST",
+    amount: 3,
+    method: "GET",
     headers: {
       Authorization: token,
       "Content-Type": "application/json",
     },
-    // body: JSON.stringify({
-    //   name: faker.name.firstName(),
-    //   dosage: faker.random.number(),
-    // })
+    body: JSON.stringify({
+      name: faker.name.firstName(),
+      dosage: faker.random.number(),
+    })
   });
 
   autocannon.track(inst, { outputStream });
