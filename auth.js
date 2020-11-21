@@ -19,6 +19,4 @@ async function auth() {
   }  
 }
 
-auth();
-
 module.exports = auth;
